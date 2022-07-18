@@ -21,3 +21,16 @@
 ||api2.coolapk.com/v6/feed/detail$replace=/"include_goods_ids":\[.*?]\,"include_goods":\[.*?]\,/ /
 ! 帖子详情赞助内容
 ||api2.coolapk.com/v6/feed/detail$replace=/\,"detailSponsorCard":{.*}/}}/
+
+!! 皮皮虾
+! 激进策略，不影响基本功能使用
+||snssdk.com^
+||mssdk.bytedance.com^
+||api.ribaoapi.com^
+||apps.bytesfield.com^
+||bytesmanager.com^
+||pglstatp-toutiao.com^
+||mssdk-bu.bytedance.com^
+||365yg.com^
+@@||p*-ppx.byteimg.com^
+@@||i.snssdk.com^
