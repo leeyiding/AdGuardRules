@@ -1,0 +1,23 @@
+! Author: leeyiding
+! Update: 2022.07.18
+
+! 百度网盘
+! 我的页福利隐藏
+||pan.baidu.com/act/v2/welfare/list
+||pan.baidu.com/act/api/activityentry
+! 我的页会员卡片banner tips
+||pan.baidu.com/act/v2/bchannel/list
+! 首页广告过滤
+||pan.baidu.com/api/usercfg?method=get
+
+!! 酷安
+! 信息流及评论区广告
+||ctobsnssdk.com^
+||pangolin.snssdk.com^
+||pangolin-sdk-toutiao.com^
+||pangolin-sdk-toutiao-b.com^
+||pglstatp-toutiao.com^
+! 帖子详情好物推荐
+||api2.coolapk.com/v6/feed/detail$replace=/"include_goods_ids":\[.*?]\,"include_goods":\[.*?]\,/ /
+! 帖子详情赞助内容
+||api2.coolapk.com/v6/feed/detail$replace=/\,"detailSponsorCard":{.*}/}}/
