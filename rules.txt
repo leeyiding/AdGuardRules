@@ -1,7 +1,7 @@
 ! Author: leeyiding
-! Update: 2022.07.18
+! Update: 2022.07.19
 
-! 百度网盘
+!! 百度网盘
 ! 我的页福利隐藏
 ||pan.baidu.com/act/v2/welfare/list
 ||pan.baidu.com/act/api/activityentry
@@ -21,6 +21,10 @@
 ||api2.coolapk.com/v6/feed/detail$replace=/"include_goods_ids":\[.*?]\,"include_goods":\[.*?]\,/ /
 ! 帖子详情赞助内容
 ||api2.coolapk.com/v6/feed/detail$replace=/\,"detailSponsorCard":{.*}/}}/
+! 发现页去除酷品
+||api2.coolapk.com/v6/main/init$replace=/{"id":1170.*?}\,/ /
+! 应用游戏页去除推广视频
+||api2.coolapk.com/v6/page/dataList$replace=/{"entityType":"card"\,"entityTemplate":"apkImageCard".*?\\u0022}"}\,/ /
 
 !! 皮皮虾
 ! 激进策略，不影响基本功能使用
@@ -34,3 +38,22 @@
 ||365yg.com^
 @@||p*-ppx.byteimg.com^
 @@||i.snssdk.com^
+
+!! 知乎
+! 开屏广告
+||api.zhihu.com/commercial_api/*launch_v2
+! 文章页推荐
+||www.zhihu.com/api/v4/answers/*/recommendations
+
+!! Flyme应用商店
+! 个人页每日应用推荐
+||api-app.meizu.com/apps/public/sp_personal_center_v3/layout$replace=/{"refreshable":false\,"data".*?"id":16365.*?}\,/ /
+! 搜索页应用推荐
+||api-app.meizu.com/apps/v4/public/search/hot$replace=/"blocks":\[.*]\,/ /
+! 搜索结果净化
+||api-app.meizu.com/apps/public/search$replace=/\,"recommends":\[.*]/ /
+! 应用详情页推荐
+||api-app.meizu.com/apps/public/detail/*/content/recommendatons
+
+!! Flyme主题美化
+||api-flow.flyme.cn/mzsdk/paral/query
