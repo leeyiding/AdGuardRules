@@ -16,8 +16,9 @@
 // @match        https://c.pc.qq.com/middlem.html*
 // @match        https://wx.mail.qq.com/list/readtemplate*
 // @match        https://mail.qq.com/cgi-bin/readtemplate*
+// @match        https://weixin110.qq.com/cgi-bin/mmspamsupport-bin/newredirectconfirmcgi*
 // @grant        none
-// @run-at      document-start
+// @run-at      document-end
 // ==/UserScript==
 
 (function () {
@@ -30,6 +31,11 @@
             if (pair[0] == variable) { return decodeURIComponent(pair[1]); }
         }
         return (false);
+    }
+
+    const htmlDecode = (input) => {
+        var doc = new DOMParser().parseFromString(input, 'text/html');
+        return doc.documentElement.textContent;
     }
 
     let urlList = [{
@@ -68,5 +74,12 @@
             window.location.href = redirect_url;
         }
     })
+    if (full_url.indexOf('https://weixin110.qq.com/cgi-bin/mmspamsupport-bin/newredirectconfirmcgi') === 0) {
+        let redirect_url = htmlDecode(cgiData.url);
+        if (!redirect_url) {
+            return;
+        }
+        window.location.href = redirect_url;
+    }
 })();
 

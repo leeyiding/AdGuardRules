@@ -17,6 +17,11 @@
 ||pangolin-sdk-toutiao.com^
 ||pangolin-sdk-toutiao-b.com^
 ||pglstatp-toutiao.com^
+||dm.toutiao.com^
+||ulogs.umeng.com^
+||aaid.umeng.com^
+||tnc*.zijieapi.com^
+||mssdk-bu.bytedance.com^
 ! 帖子详情好物推荐
 ||api2.coolapk.com/v6/feed/detail$replace=/"include_goods_ids":\[.*?]\,"include_goods":\[.*?]\,/ /
 ! 帖子详情赞助内容
@@ -57,3 +62,35 @@
 
 !! Flyme主题美化
 ||api-flow.flyme.cn/mzsdk/paral/query
+
+!! Flyme浏览器
+||bro.flyme.cn/static/searchEngine/listHotSearch
+
+!!百度搜索移动端
+baidu.com###tab_news_1
+baidu.com###bottom
+
+! 百度经验
+! PC端
+jingyan.baidu.com###aside > div.right-fixed-related-wrap:nth-child(4)
+jingyan.baidu.com###aside > div.aside-wrap.wgt-cms-banner:nth-child(3)
+jingyan.baidu.com###aside > div.wgt-income-money:first-child
+jingyan.baidu.com###aside > div.aside-wrap:last-child
+jingyan.baidu.com###task-panel-wrap > div.task-panel-entrance:last-child
+jingyan.baidu.com###fresh-share-exp-e
+jingyan.baidu.com###wgt-like
+jingyan.baidu.com###wgt-barrier-free
+jingyan.baidu.com###wgt-exp-share
+jingyan.baidu.com###bottom-ads-container
+jingyan.baidu.com###bottom-pic-ads-wrap
+
+! 百度知道
+! PC端
+zhidao.baidu.com##button.task-list-button:nth-child(10)
+zhidao.baidu.com##div.jump-top-box:nth-child(45)
+zhidao.baidu.com###qb-side > div.cms-slide.cms-slide-lazy.mod-noshadow:nth-child(2)
+zhidao.baidu.com###qbrightdown-wapqbbrand
+zhidao.baidu.com###wgt-ad-right-fixed > div.wgt-push:last-child > div.wgt-push-title:first-child > h2.hd.line:first-child > i.red-envelope
+zhidao.baidu.com###wgt-answers > div.bd-wrap > div.wgt-ads.answerlist:nth-child(4)
+zhidao.baidu.com###qbleftdown-container
+zhidao.baidu.com###qb-content > div.wgt-bottom-union.mod-shadow.last.line.wgt-union-bottom:last-child
