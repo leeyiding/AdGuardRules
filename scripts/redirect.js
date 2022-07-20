@@ -68,6 +68,7 @@
     urlList.forEach(item => {
         if (full_url.indexOf(item.url) === 0) {
             let redirect_url = queryURLParams(item.param);
+            console.log(`正在重定向至${redirect_url}`);
             if (!redirect_url) {
                 return;
             }
@@ -76,6 +77,7 @@
     })
     if (full_url.indexOf('https://weixin110.qq.com/cgi-bin/mmspamsupport-bin/newredirectconfirmcgi') === 0) {
         let redirect_url = htmlDecode(cgiData.url);
+        console.log(`正在重定向至${redirect_url}`);
         if (!redirect_url) {
             return;
         }
